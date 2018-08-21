@@ -1,0 +1,6 @@
+open CMD
+type "cd C:\Django Project\hello_world"
+type "python manage.py runserver"
+Open Chrome
+Navigate to "http://localhost:8000/hello/
+Profit
