@@ -1,2 +1,0 @@
-DB_NAME="CRC Database"
-DB_PASS="CRC"
