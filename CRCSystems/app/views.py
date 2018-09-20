@@ -6,6 +6,8 @@ from django.shortcuts import render
 from django.http import HttpRequest
 from django.template import RequestContext
 from datetime import datetime
+from django.core.mail import send_mail
+from django.conf import settings
 
 def home(request):
     """Renders the home page."""
@@ -44,3 +46,14 @@ def about(request):
             'year':datetime.now().year,
         }
     )
+
+def email(request):
+    """Sends email automatically"""
+    subject = 'Lost Property at Car Rental Company'
+    message = 'Hi, \n\nWe found your belongings from the last car that you rent from CRC, Please call us to schedule your pick up time. Thank You.\n\nRegards, \n\nCRC Manager'
+    email_from = settings.EMAIL_HOST_USER
+    recipient_list = ['kiki.mutiara49@yahoo.com',]
+
+    send_mail( subject, message, email_from, recipient_list )
+
+    return HttpResponse('<h1>Email sent!</h1>')
