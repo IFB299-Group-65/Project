@@ -30,7 +30,8 @@ CREATE TABLE IF NOT EXISTS DataInStore (
     `Car_StandardTransmission` VARCHAR(5) CHARACTER SET UTF8MB4,
     `Car_BodyType` VARCHAR(14) CHARACTER SET UTF8MB4,
     `Car_Drive` VARCHAR(4) CHARACTER SET UTF8MB4,
-    `Car_Wheelbase` VARCHAR(6) CHARACTER SET UTF8MB4
+    `Car_Wheelbase` VARCHAR(6) CHARACTER SET UTF8MB4,
+	PRIMARY KEY (Order_ID, Pickup_Or_Return)
 );
 INSERT INTO DataInStore VALUES
     (1,'Alexandria_store','3761 N. 14th St','1 (11) 543 535-0162','Alexandria                    ','New South Wales',21,20050721,'Return',20050810,11053,'Ana P','859-535-011*','1660 Stonyhill Circle','1984-08-10 00:00:00','Labour','M  ',14842,'BMW','3','E90 20i EXECUTIVE','2005','57200','2.0L','MULTI POINT F/INJ','65L','110Kw','5','6AS','4D SEDAN','RWD','2760mm'),
