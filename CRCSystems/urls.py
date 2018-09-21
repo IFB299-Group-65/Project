@@ -19,7 +19,6 @@ import app.views
 # admin.autodiscover()
 
 urlpatterns = [
-    # Examples:
     url(r'^$', app.views.home, name='home'),
     url(r'^home.html$', app.views.home, name='home'),
     url(r'^sendEmail/', include('sendEmail.urls')),
