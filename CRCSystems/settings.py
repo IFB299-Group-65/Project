@@ -40,7 +40,7 @@ EMAIL_HOST_PASSWORD = 'ifb299-65'
 INSTALLED_APPS = [
     'app',
     'sendEmail',
-    'pusherchat',
+    #'pusherchat',
     # Add your apps here to enable them
     'django.contrib.admin',
     'django.contrib.auth',
