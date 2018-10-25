@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+
+<head>
+<title>Car Servicing</title>
+</head>
+<head>
+
+<style>
+
+	th, td{
+		border : 1px solid black;
+	}
+	body {
+		background-image:url("https://ae01.alicdn.com/kf/HTB1nAkRi9YH8KJjSspdq6ARgVXa4/white-damask-gray-grey-Floral-pattern-Background-Vinyl-cloth-High-quality-Computer-print-wall-photo-backdrop.jpg_640x640.jpg");
+	}
+	a{
+		font-size:20px
+	}
+
+
+
+</style>
+<h1>Car Servicing</h1>
+</head>
+<body>
+<form action="" method ="get">
+<h3>Enter Car ID</h3>
+<input type="text" name="Car_ID">
+<input type="Submit" name="submit">
+
+</form>
+
+<br /><br /><br /><br />
+<h3>Last Service</h3>
+
+<table style="width:100%" >
+  <tr>
+    <th>Car ID</th>
+    <th>Service Date</th> 
+  </tr>
+  <tr>
+    <td>{{data.car_id}}</td>
+    <td>{{data.service_date}}</td> 
+  </tr>
+</table>
+
+<br />
+
+<a href "report.html">Report</a>
+
+
+</html>
