@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  margin: 0;
+  font-family: Arial;
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+
+.topnav a {
+  float: left;
+  color: #0099ff;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #0099ff;
+  color: white;
+}
+
+table {
+    font-family: arial;
+    border-collapse: collapse;
+    width: 100%;
+    font-size: 15px;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+</style>
+</head>
+<body>
+
+<div class="topnav">
+  <a class="active" href="homepage.html">Home</a>
+  <a href="pricing.html">Pricing</a>
+  <a href="booking.html">Booking</a>
+  <a href="servicing.html">Servicing</a>
+</div>
+</body>
+    
+<style>    
+        {
+    background-image:url("https://ae01.alicdn.com/kf/HTB1nAkRi9YH8KJjSspdq6ARgVXa4/white-damask-gray-grey-Floral-pattern-Background-Vinyl-cloth-High-quality-Computer-print-wall-photo-backdrop.jpg_640x640.jpg");
+    }
+    
+</style>
+<head>
+<title>Car Servicing</title>
+</head>
+<head>
+
+<h1>Car Details</h1>
+</head>
+
+<table style=width:100%>
+  <tr>
+    <th>Car Name</th>
+    <th>Model</th>
+    <th>Series</th>
+    <th>Year</th>
+    <th>Price</th>
+    <th>Engine</th>
+    <th>Fuel System</th>
+    <th>Fuel Capacity</th>
+    <th>Power</th>
+    <th>Seating</th>
+    <th>Transmission</th>
+    <th>Wheelsbase</th>
+    <th>Rental Price</th>
+  </tr> 
+    
+    {% for detail in details %}
+    <tr>
+        <td>{{detail.car_makename}}</td> 
+        <td>{{detail.car_model}}</td>
+        <td>{{detail.car_series}}</td>
+        <td>{{detail.car_seriesyear}}</td>
+        <td>{{detail.car_pricenew}}</td>
+        <td>{{detail.car_enginesize}}</td>
+        <td>{{detail.car_fuelsystem}}</td>
+        <td>{{detail.car_tankcapacity}}</td>
+        <td>{{detail.car_power}}</td>
+        <td>{{detail.car_seatingcapacity}}</td>
+        <td>{{detail.car_standardtransmission}}</td>
+        <td>{{detail.car_wheelbase}}</td>
+        <td>{{detail.car_rentalprice}}</td>
+    </tr>
+    {% endfor %}
+    
+</table>
+</html>
