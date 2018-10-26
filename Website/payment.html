@@ -19,8 +19,10 @@
 	<style>
 		
 		body {
-			background-image: url("fourth.jpg");
-			background-size: cover;
+			background-image: url("payment1.jpg");
+			background-repeat: no-repeat;
+			background-size: 100% 400%;
+			background-color:black
 		}
 		
 		.banner {
@@ -28,22 +30,38 @@
 			font-family: Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", "serif";
 		}
 		
-		a:link {
+		.navbar a {
+			display: block;
+			color: white;
+			float: left;
+			padding: 14px 16px;
+			text-decoration: none;
+		}
+		
+		.navbar a:link {
     		color: green;
-   		 	background-color: transparent;
+    		background-color: transparent;
 			text-decoration: none;
 		}
 
-		a:visited {
+		.navbar a:visited {
 			color: green;
 			background-color: transparent;
 			text-decoration: none;
 		}		
 		
-		a:hover {
+		.navbar li a:hover {
 			color: blue;
 			background-color: transparent;
-			text-decoration: underline;
+		}
+		
+		.navbar {
+			list-style-type: none;
+			margin: 10px;
+			padding: 0;
+			overflow: hidden;
+			background-color: #333;
+			font-size: 25px;
 		}
 	
 	</style>
@@ -52,13 +70,14 @@
 <body>
 	<div class="banner">
 		<center><h1>Payments</h1></center>
-		<hr/>
-		<center><font size="5"><a href="home.html">Home</a> | 
-			<a href="price.html">Price</a> | 
-			<a href="booking.html">Booking</a> | 
-			<a href="payment.html">Payments</a> | 
-			<a href="terms-and-conditions.html">Terms and Conditions</a> | 
-			<a href="tracking.html">Tracking</a></font> </center>
+			<div class="navbar">
+				<li><a href="home.html">Home</a></li>
+				<li><a href="price.html">Price</a></li> 
+				<li><a href="booking.html">Booking</a></li> 
+				<li><a href="payment.html">Payments</a></li>
+				<li><a href="terms-and-conditions.html">Terms and Conditions</a></li>
+				<li><a href="tracking.html">Tracking</a></li>
+			</div>
 	</div>
 	
   

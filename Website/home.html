@@ -18,7 +18,26 @@
   <link rel="stylesheet" href="assets/theme/css/style.css">
   <link rel="stylesheet" href="assets/mobirise/css/mbr-additional.css" type="text/css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  
+	<script type="text/javascript">
+	function active(){
+		var searchBar = document.getElementById('searchBar');
+		
+		if(searchBar.value == 'Search..'){
+			searchBar.value = ''
+			searchBar.placeholder = 'Search..'
+		}
+	}
+	
+	function inactive(){
+		var searchBar = document.getElementById('searchBar');
+		
+		if(searchBar.value == ''){
+			searchBar.value = 'Search..'
+			searchBar.placeholder = ''
+		}
+	}
+	</script>
+
 <style>
 	body{
 		background-image: url("first.jpg");
@@ -33,7 +52,11 @@
 	
 	.row{
 		text-align: center;
-		margin-top: 100px;
+		margin-top: 20px;
+	}
+	
+	.info {
+		margin-top: 20px;
 	}
 	
 	.form-container{
@@ -49,6 +72,16 @@
 		object-position: center;
 		text-align: center;
 		padding: 3px;
+	}
+	
+	.bottombar {
+		overflow: visible;
+		bottom: 0;
+		width: auto;
+		background-color: #333;
+		font-size: 10px;
+		position: relative;
+		height: auto;
 	}
 	
 	.input-group-btn{
@@ -67,6 +100,7 @@
 		padding: 10px;
 		margin: 3px;
 		border-radius: 5px;
+		font-size: 10px;
 	}
 	
 	.fa:hover {
@@ -76,65 +110,136 @@
 	.fa-facebook {
     	background: #3B5998;
     	color: white;
+		margin: 0;
+		padding: 5px;
 	}
 	
 	.fa-twitter {
 		background: #00B8FF;
     	color: white;
+		margin: 0;
+		padding: 5px;
 	}
 	
 	.fa-google-plus {
 		background: #B80003;
 		color: white;
+		margin: 0;
+		padding: 5px;
 	}
 	
-	a:link {
-    	color: green;
-    	background-color: transparent;
+	.navbar a {
+		display: block;
+		color: white;
+		float: left;
+		padding: 14px 16px;
+		text-decoration: none;
+	}
+		
+	.navbar a:link {
+   		color: green;
+   		background-color: transparent;
 		text-decoration: none;
 	}
 
-	a:visited {
+	.navbar a:visited {
 		color: green;
 		background-color: transparent;
 		text-decoration: none;
 	}		
 		
-	a:hover {
+	.navbar li a:hover {
 		color: blue;
 		background-color: transparent;
-		text-decoration: underline;
+	}
+		
+	.navbar {
+		list-style-type: none;
+		margin: 10px;
+		padding: 0;
+		overflow: hidden;
+		background-color: #333;
+		font-size: 25px;
 	}
 	
-</style>
+	.bottombar {
+		overflow: hidden;
+		position: fixed;
+		bottom: 0;
+		width: 100%;
+	}
 	
+	.dropdown {
+	}
+	
+	#searchBar {
+		border: 1px solid #000000;
+		border-right: none;
+		font-size: 16px;;
+		padding: 10px;
+		outline: none;
+		width: 250px;
+		-webkit-border-top-left-radius:10px;
+		-webkit-border-bottom-left-radius: 10px;
+		-moz-border-radius-topleft: 10px;
+		-moz-border-radius-bottomleft: 10px;
+		border-top-left-radius: 10px;
+		border-bottom-left-radius: 10px;
+	}
+	
+	#searchBtn{
+		border: 1px solid #000000;
+		font-size: 16px;
+		padding: 10px;
+		background: #f1d829;
+		font-weight: bold;
+		cursor: pointer;
+		outline: none;
+		-webkit-border-top-right-radius:10px;
+		-webkit-border-bottom-right-radius: 10px;
+		-moz-border-radius-topright: 10px;
+		-moz-border-radius-bottomright: 10px;
+		border-top-right-radius: 10px;
+		border-bottom-right-radius: 10px;
+	}
+	
+	#searchBtn:hover {
+		background: #f6e049;
+	}
+	
+	.share-container {
+		padding-left: 100px;
+	}
+	
+	
+</style>
+
   
 </head>
 	
 	
 <body>
 	<div class="banner">
-		<hr><center><h1>Home</h1></center>
-		<hr/>
-		<center><font size="5"><a href="home.html" title="Go to Index">Home</a> | 
-			<a href="price.html">Price</a> | 
-			<a href="booking.html">Booking</a> | 
-			<a href="payment.html">Payments</a> | 
-			<a href="terms-and-conditions.html">Terms and Conditions</a> | 
-			<a href="tracking.html">Tracking</a></font> </center>
+		<center><h1>Home</h1></center>
+			<div class="navbar">
+				<li><a href="home.html">Home</a></li>
+				<li><a href="price.html">Price</a></li> 
+				<li><a href="booking.html">Booking</a></li> 
+				<li><a href="payment.html">Payments</a></li>
+				<li><a href="terms-and-conditions.html">Terms and Conditions</a></li>
+				<li><a href="tracking.html">Tracking</a></li>
+			</div>
 	</div>
 	
-  <section class="cid-r2OYkrL4Jf mbr-fullscreen mbr-parallax-background" id="header15-1">
-
-    
-
-    <div class="mbr-overlay" style="opacity: 0.5; background-color: rgb(7, 59, 76);"></div>
-
+	<div class="search">
+		<div class="search-container">
+		<form action="" method="post">
+			<input type="text" id="searchBar" placeholder="" value="Search.." maxlength="25" autocomplete="off" onmousedown="active();" onblur="inactive();"/><input type="submit" id="searchBtn" value="GO" />
+		</form>
     <div class="container align-right">
 <div class="row">
-    <div class="mbr-white col-lg-8 col-md-7 content-container">
-        <h1 class="mbr-section-title mbr-bold pb-3 mbr-fonts-style display-1">
-            Car Rental</h1>
+    <div class="info">
+        <h1>Car Rental</h1>
         <p class="mbr-text pb-3 mbr-fonts-style display-5">
             Please enter your information to begin renting a vehicle</p>
     </div>
@@ -170,47 +275,48 @@
     </div>
     </div>
 </div>
-    </div>
-    <div class="mbr-arrow hidden-sm-down" aria-hidden="true">
-        <a href="#next">
-            <i class="mbri-down mbr-iconfont"></i>
-        </a>
-    </div>
-</section>
 
-<section class="cid-r2P0pZ0rhh" id="social-buttons1-9">
-    
-    
-
-    
-
-    <div class="container">
-        <div class="media-container-row">
-            <div class="col-md-8 align-center">
-                <h2 class="pb-3 mbr-section-title mbr-fonts-style display-2">
+    <div class="bottombar">
+    <div class="share-container">
+        
+            
+                <h2>
                     SHARE THIS PAGE!
-                </h2>
+                
                 <div>
                     <div class="socialshare" data-counters="false">
                         <span class="facebookbtn" title="Share link on Facebook">
-                            <i class="fa fa-facebook" style="font-size: 25px;"></i>
+                            <i class="fa fa-facebook"></i>
                         </span>
                         <span class="twitterbtn" title="Share link on Twitter">
-                            <i class="fa fa-twitter" style="font-size: 25px;"></i>
+                            <i class="fa fa-twitter" ></i>
                         </span>
                         <span class="googleplusbtn" title="Share link on Google+">
-                            <i class="fa fa-google-plus" style="font-size: 25px;"></i>
+                            <i class="fa fa-google-plus"></i>
                         </span>
-						
-						<a href="http://www.facebook.com" class="fa fa-facebook"></a>
-                        
                     </div>
                 </div>
-            </div>
-        </div>
+				</h2>
+            
+        
     </div>
-</section>
-
+	
+		<div class="dropdown"><center>
+					<select>
+						<option selected="true" value="">English</option>
+						<option value="">Japanese</option>
+						<option value="">German</option>
+						<option value="">Indonesian</option>
+						<option value="">Arabic</option>
+						<option value="">Chinese</option>
+						<option value="">Greek</option>
+						<option value="">Malay</option>
+						<option value="">Russian</option>
+						<option value="">Dutch</option>
+					</select></center>
+				</div>
+	
+	</div>
  
 </body>
 </html>
