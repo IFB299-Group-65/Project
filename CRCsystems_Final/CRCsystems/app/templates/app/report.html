@@ -1,0 +1,45 @@
+<html>
+    <head>
+        <title>Car Report</title>
+    </head>
+    <body>
+        <center><font size = '5'>Report Page</font>
+            
+        <br><br><br><br>
+        <form action="" method="get">
+            <p>Select pick up or return data:<br></p>
+            <select name="method">
+                <option value="Picked Up">Picked Up</option>
+                <option value="Returned">Returned</option>
+            </select>
+            <br><br>
+            <p>Select state store location:<br></p>
+            Store ID:<input type="text" name="location">
+            <br><br>
+            <p>Select month:<br></p>
+            <select name="month">
+                <option value="01">01</option>
+                <option value="02">02</option>
+                <option value="03">03</option>
+                <option value="04">04</option>
+                <option value="05">05</option>
+                <option value="06">06</option>
+                <option value="07">07</option>
+                <option value="08">08</option>
+                <option value="09">09</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+            </select>
+            
+            <br><br>
+            <input type="submit" class="btn" value="Submit" name="mybtn">
+        </form>
+            <h1>Show how many cars picked up/return in that month</h1>
+            <h1>{{o}}</h1>
+        </center>
+        <a href="/home.html/">HOME</a>
+        <a href="/last_service.html/">Service data</a>
+        <a href="/cardetails.html/">Car Details</a>
+    </body>
+</html>
